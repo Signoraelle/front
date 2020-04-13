@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import SingedInlinks from "./SingedInLinks";
+import SingedOutlinks from "./SingedOutLinks";
 
 const NavBar = () => {
   return (
@@ -10,6 +11,7 @@ const NavBar = () => {
           Logo
         </Link>
         <SingedInlinks />
+        <SingedOutlinks />
       </div>
     </nav>
   );

@@ -1,20 +1,24 @@
 import React, { Component } from "react";
 
-class Singin extends Component {
+class SingIn extends Component {
   state = {
-
+    email: '',
+    password: ''
   }
   handleChange = (e) => {
-    console.log(e)
+    this.setstate({
+      [e.target.id]: e.target.value
+    })
   }
   handleSubmit = (e) => {
-    console.log(e)
+    e.preventDefault();
+    console.log(this.state);
   }
   render() {
     return (
       <div className="container">
         <form onSubmit={this.handleSubmit} className="white">
-          <h5 className="grey-text darken-3">Sing In</h5>
+          <h5 className="grey-text text-darken-3">Sing In</h5>
           <div className="input-field">
             <label htmlFor="email">Email</label>
             <input type="email" id="email" onChange={this.handleChange} />
@@ -30,6 +34,6 @@ class Singin extends Component {
       </div>
     );
   }
-}
+};
 
-export default Singin;
+export default SingIn

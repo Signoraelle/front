@@ -2,8 +2,8 @@
 
 
 import React, { Component } from 'react'
-import Notifications from './Notications'
-import ProjectList from '../project/ProjectList'
+import Notifications from './Notifications'
+import ProjectList from '../projects/ProjectList'
 class Dashboard extends Component {
   render() {
     return (

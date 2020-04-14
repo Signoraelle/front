@@ -1,3 +1,4 @@
+const authRouter = require('./auth/auth')
 // declare all the necessary libraries
 const http = require('http');
 const path = require('path');
@@ -11,7 +12,7 @@ app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
-
+app.use("/auth", authRouter);
 // implement the API part
 app.get("/", (req, res) => {
   res.send("youhou");

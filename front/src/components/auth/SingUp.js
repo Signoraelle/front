@@ -14,7 +14,19 @@ class SingUp extends Component {
   }
   handleSubmit = (e) => {
     e.preventDefault();
-  }
+
+    fetch("/auth/signup", {
+      method: "POST",
+      headers: new Headers({
+        "Content-Type": "application/json"
+      }),
+      body: JSON.stringify(this.state)
+    })
+      .then(res => res.json())
+      .then(res => this.setState({ flash: res.flash }))
+      .catch(err => this.setState({ flash: err.flash }));
+  };
+
 
   render() {
     return (

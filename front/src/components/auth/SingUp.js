@@ -2,11 +2,10 @@ import React, { Component } from "react";
 
 class SingUp extends Component {
   state = {
-    email: '',
-    password: '',
-    firstName: '',
-    lastName: ''
-
+    name: "",
+    surname: "",
+    email: "",
+    password: "",
   }
   handleChange = (e) => {
     this.setState({
@@ -15,8 +14,8 @@ class SingUp extends Component {
   }
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state);
   }
+
   render() {
     return (
       <div className="container">

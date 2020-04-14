@@ -6,7 +6,7 @@ class SingIn extends Component {
     password: ''
   }
   handleChange = (e) => {
-    this.setstate({
+    this.setState({
       [e.target.id]: e.target.value
     })
   }

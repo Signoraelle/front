@@ -5,11 +5,11 @@ class SingUp extends Component {
     email: '',
     password: '',
     firstName: '',
-    LastName: '',
+    lastName: '',
 
   }
   handleChange = (e) => {
-    this.setstate({
+    this.setState({
       [e.target.id]: e.target.value
     })
   }

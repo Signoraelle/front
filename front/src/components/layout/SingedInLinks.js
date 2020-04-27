@@ -7,11 +7,11 @@ const SingedInlinks = () => {
       <li>
         {/* <NavLink to="/create">New Project</NavLink> */}
       </li>
-      <li>
+      {/* <li>
         <NavLink to="/">Log Out</NavLink>
-      </li>
+      </li> */}
       <li>
-        <NavLink to="/" className="btn btn-floating pink lighten-1">
+        <NavLink to="/profile" className="btn btn-floating pink lighten-1">
           NN
         </NavLink>
       </li>

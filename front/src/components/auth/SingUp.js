@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+
 class SingUp extends Component {
   state = {
     name: "",
@@ -52,6 +53,8 @@ class SingUp extends Component {
             <button className="btn pink lighten-1 z-depth-0">Login</button>
           </div>
         </form>
+
+
       </div>
     );
   }

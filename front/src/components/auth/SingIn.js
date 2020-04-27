@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { NavLink } from "react-router-dom";
 class SingIn extends Component {
   state = {
     email: '',
@@ -17,7 +17,7 @@ class SingIn extends Component {
   render() {
     return (
       <div className="container">
-        <form onSubmit={this.handleSubmit} className="white">
+        <form onSubmit={this.handleSubmit} action="/" method="POST" className="white">
           <h5 className="grey-text text-darken-3">Sing In</h5>
           <div className="input-field">
             <label htmlFor="email">Email</label>
@@ -30,8 +30,19 @@ class SingIn extends Component {
           <div className="input-field">
             <button className="btn pink lighten-1 z-depth-0">Login</button>
           </div>
+
+          <p className="new">New here?</p>
+          <NavLink to="/signup">
+            <p className="redirect-two">Register now!</p>
+          </NavLink>
+          <div className="profile">
+            <NavLink to="/profile">
+              <p>Go to your profile</p>
+            </NavLink>
+          </div>
         </form>
       </div>
+
     );
   }
 };

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import axios from 'axios';
 class SingIn extends Component {
   state = {
     email: '',
@@ -12,7 +13,8 @@ class SingIn extends Component {
   }
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state);
+    const { email, password } = this.state;
+    axios.post('/new-user', { email, password }).then(response => response);
   }
   render() {
     return (

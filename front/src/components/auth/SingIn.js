@@ -13,13 +13,14 @@ class SingIn extends Component {
   }
   handleSubmit = (e) => {
     e.preventDefault();
-    const { email, password } = this.state;
-    axios.post('/new-user', { email, password }).then(response => response);
+    const response = await axios.post("/auth/signin", form);
+    console.log(response);
+    setFlash(true);
   }
   render() {
     return (
       <div className="container">
-        <form onSubmit={this.handleSubmit} action="/" method="POST" className="white">
+        <form onSubmit={handleSubmit} action="/" method="POST" className="white">
           <h5 className="grey-text text-darken-3">Sing In</h5>
           <div className="input-field">
             <label htmlFor="email">Email</label>
